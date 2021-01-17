@@ -1,10 +1,25 @@
+@font-face{
+    font-family: "TTNormsPro";
+    src: url(/fonts/TTNormsPro/TT\ Norms\ Pro\ Regular.otf);
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: "TTNormsPro";
+    src: url(/fonts/TTNormsPro/TT\ Norms\ Pro\ Medium.woff);
+    font-style: medium;
+    font-weight: 500;
+    font-display: swap;
+}
 html,
 body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    /* line-height: 1.6; */
+
     font-size: 18px;
     background-color: #080604;
     color: #ffffff;

@@ -8,17 +8,31 @@ export default function Hi() {
     <Layout>
       <Head>
         <title>{siteTitle}</title>
+        <link
+          rel="preload"
+          href="/fonts/TTNormsPro/TT Norms Pro Regular.otf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/TTNormsPro/TT Norms Pro Medium.woff"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
-      <div className="homepage">
-        <h1 className="title">THE YEAR IT ALL HAPPENED</h1>
-        <img src="/images/desktop-hero.jpg" alt="" />
-        <p>Read the best collection of people’s 2020 Year in Review stories.</p>
+      <div className={homeStyles.homepage}>
+        <h1 className={homeStyles.title}>THE YEAR IT ALL HAPPENED</h1>
+        <img src="/images/desktop-hero.jpg" alt="2020 logo" />
+        <p className={homeStyles.caption}>
+          Read the best collection of people’s 2020 Year in Review stories.
+        </p>
         <div className={homeStyles.cta}>
           <Link href="/stories">
             <a>EXPLORE STORIES</a>
           </Link>
           <Link href="/add-story">
-            <a>SHARE YOURS +</a>
+            <a>SHARE YOURS &ensp;+</a>
           </Link>
         </div>
       </div>

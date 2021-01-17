@@ -1,4 +1,47 @@
 .cta {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  /* gap: 5em; 68% supported*/
+}
+
+.cta > * + * {
+  margin-left: 3em;
+  padding: 0.6rem 0.9rem;
+  border-radius: 3px;
+  background-color: #2b3635;
+  vertical-align: bottom;
+}
+
+.cta > :first-child {
+  border: 1px solid #fefefe;
+  padding: 0.6rem 0.9rem;
+  border-radius: 3px;
+}
+
+.cta > :first-child::after {
+  content: url(/images/Vector.svg);
+  margin-left: 1rem;
+}
+
+.cta a:hover {
+  opacity: 0.5;
+}
+
+.homepage {
+  text-align: center;
+  color: #fefefe;
+  font-family: TTNormsPro;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  margin-bottom: 0.7em;
+}
+
+.caption {
+  margin-top: 0.8em;
+  font-size: 25px;
 }

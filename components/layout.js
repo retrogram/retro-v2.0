@@ -40,7 +40,7 @@ export default function Layout({ children }) {
           <div className="left-nav">
             <Link href="/">
               <a className={navStyles.name}>
-                <img src="/images/retro-logo.jpeg" />
+                <img src="/images/retro-logo.jpeg" className={navStyles.logo} />
               </a>
             </Link>
           </div>
@@ -65,7 +65,9 @@ export default function Layout({ children }) {
 
               <li className={navStyles.mainNavlist}>
                 <Link href="/add-story">
-                  <a className={navStyles.navLinks}>Add Your Story</a>
+                  <a className={navStyles.storiesLink}>
+                    Add Your Story &nbsp;+
+                  </a>
                 </Link>
               </li>
             </ul>
