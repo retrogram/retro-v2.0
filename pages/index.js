@@ -23,7 +23,7 @@ export default function Hi() {
       </Head>
       <div className={homeStyles.homepage}>
         <h1 className={homeStyles.title}>THE YEAR IT ALL HAPPENED</h1>
-        <img src="/images/desktop-hero.jpg" alt="2020 logo" />
+        <img className={homeStyles.yearLogo} src="/images/2020-mobile.svg" alt="2020 logo" />
         <p className={homeStyles.caption}>
           Read the best collection of people’s 2020 Year in Review stories.
         </p>
@@ -32,7 +32,7 @@ export default function Hi() {
             <a>EXPLORE STORIES</a>
           </Link>
           <Link href="/add-story">
-            <a>SHARE YOURS &ensp;+</a>
+            <a>SHARE YOURS &emsp; &ensp;+</a>
           </Link>
         </div>
       </div>

@@ -40,7 +40,7 @@ export default function Layout({ children }) {
           <div className="left-nav">
             <Link href="/">
               <a className={navStyles.name}>
-                <img src="/images/retro-logo.jpeg" className={navStyles.logo} />
+                <img src="/images/R-logo.svg" alt="R-logo" className={navStyles.logo} />
               </a>
             </Link>
           </div>
