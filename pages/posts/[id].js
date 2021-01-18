@@ -3,8 +3,12 @@ import Link from 'next/link'
 import Layout from '../../components/layout'
 import styles from '../../components/layout.module.css'
 import utilStyles from '../../styles/utils.module.css'
+import { useState } from 'react';
+import Example from '../../components/modal';
+import { Modal } from 'react-bootstrap';
 
 import { getAllPostIds, getPostData } from '../../lib/posts'
+import Social from '../../components/social-share'
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id)
@@ -24,6 +28,18 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => {
+        setShow(false);
+    };
+
+    const onShare = () => {
+        handleClose();
+        setShow(true)
+    };
+
     return (
         <Layout>
             <Head>
@@ -33,7 +49,12 @@ export default function Post({ postData }) {
                 <h1 className={utilStyles.headingXl}>{postData.title}</h1>
                 <img src={postData.image} />
                 <a href={postData.twitter}>{postData.name}</a>
-                {/* <a href={`https://twitter.com/intent/tweet?text=Check%20out%20my%20year%20in%20review%20here%20https%3A//retroo.xyz/${postData.id}`}>Share Here</a> */}
+                <button onClick={onShare}>Share</button>
+                <Example show={show}>
+                    <Modal.Header onClick={handleClose} closeButton />
+                    <h3>Share via</h3>
+                    <Social url={`https://retrogram.co/${postData.id}`} />
+                </Example>
                 <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </article>
             <div className={styles.backToHome}>

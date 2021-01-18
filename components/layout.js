@@ -37,7 +37,7 @@ export default function Layout({ children }) {
                     <div className="left-nav">
                         <Link href='/'>
                             <a className={navStyles.name}>
-                                <img src='/images/retro-logo.jpeg' />
+                                <img src='/images/Retrogram-logo.svg' alt='retrogram logo' />
                             </a>
                         </Link>
                     </div>
