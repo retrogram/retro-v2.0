@@ -26,10 +26,10 @@
   margin-bottom: 1rem;
 }
 
- .cta > :first-child::after {
-    margin-left: 0.7rem;
-    content: url(/images/Vector.svg);
-  }
+.cta > :first-child::after {
+  margin-left: 0.7rem;
+  content: url(/images/Vector.svg);
+}
 
 .cta > :last-child {
   border-radius: 3px;

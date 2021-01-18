@@ -23,7 +23,11 @@ export default function Hi() {
       </Head>
       <div className={homeStyles.homepage}>
         <h1 className={homeStyles.title}>THE YEAR IT ALL HAPPENED</h1>
-        <img className={homeStyles.yearLogo} src="/images/2020-mobile.svg" alt="2020 logo" />
+        <img
+          className={homeStyles.yearLogo}
+          src="/images/2020-mobile.svg"
+          alt="2020 logo"
+        />
         <p className={homeStyles.caption}>
           Read the best collection of people’s 2020 Year in Review stories.
         </p>
