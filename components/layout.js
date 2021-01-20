@@ -10,6 +10,12 @@ function handleClick(e) {
   e.preventDefault();
   const mainNav = document.getElementById("js-menu");
   mainNav.classList.toggle(`${navStyles.active}`);
+  if(mainNav.classList.contains(`${navStyles.active}`)){
+    e.target.innerHTML = `&times;`;
+  }
+  else{
+    e.target.innerHTML = `&#9776;`;
+  }
 }
 
 export default function Layout({ children }) {
@@ -40,7 +46,11 @@ export default function Layout({ children }) {
           <div className="left-nav">
             <Link href="/">
               <a className={navStyles.name}>
-                <img src="/images/R-logo.svg" alt="R-logo" className={navStyles.logo} />
+                <img
+                  src="/images/R-logo.svg"
+                  alt="R-logo"
+                  className={navStyles.logo}
+                />
               </a>
             </Link>
           </div>
@@ -48,10 +58,17 @@ export default function Layout({ children }) {
           <div className={navStyles.rightNav}>
             <ul className={navStyles.mainNavbar} id="js-menu">
               <li className={navStyles.mainNavlist}>
+                <a href="/" className={navStyles.homeNavLink}>
+                  Home
+                </a>
+              </li>
+
+              <li className={navStyles.mainNavlist}>
                 <a
                   href="https://retroo.xyz"
                   target="_blank"
                   className={navStyles.navLinks}
+                  rel="noopener"
                 >
                   2019
                 </a>
@@ -69,6 +86,14 @@ export default function Layout({ children }) {
                     Add Your Story &nbsp;+
                   </a>
                 </Link>
+              </li>
+
+              <li className={navStyles.mainNavlist}>
+                {/* <Link href="/add-story"> */}
+                <a className={navStyles.shareLink}>
+                  Share Yours&emsp; +
+                </a>
+                {/* </Link> */}
               </li>
             </ul>
           </div>

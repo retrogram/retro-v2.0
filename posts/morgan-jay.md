@@ -1,7 +1,7 @@
 ---
-title: 'Waving that flag changed my life.'
+title: '2020 gave me a lot, but the price was great.'
 image: /images/happy.png
-twitter: 'https://twitter/onyeepeace'
+twitter: 'https://twitter/jay__jm'
 name: 'Morgan Jay'
 # share: 'https://twitter.com/intent/tweet?text=Check%20out%20my%20year%20in%20review%20here%20https%3A//retroo.xyz/'
 readMore: 'https://'

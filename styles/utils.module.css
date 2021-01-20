@@ -1,52 +1,139 @@
 .heading2Xl {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    font-weight: 800;
-    letter-spacing: -0.05rem;
-    margin: 1rem 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
 }
 
 .headingXl {
-    font-size: 2rem;
-    line-height: 1.3;
-    font-weight: 800;
-    letter-spacing: -0.05rem;
-    margin: 1rem 0;
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
 }
 
 .headingLg {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
 }
 
 .headingMd {
-    font-size: 1.2rem;
-    line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-style: normal;
+  color: #ffffff;
 }
 
 .borderCircle {
-    border-radius: 9999px;
+  border-radius: 9999px;
 }
 
 .colorInherit {
-    color: inherit;
+  color: inherit;
 }
 
-.padding1px {
-    padding-top: 1px;
+.padding {
+  padding-top: 1px;
 }
 
 .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  animation-name: bounceIn;
+  animation-duration: 1s;
 }
 
 .listItem {
-    margin: 0 0 1.25rem;
+  margin: 0 0 1.25rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.11) 0%, #000000 94.79%);
+  border-radius: 6px;
+  width: 351px;
+  height: 344px;
+}
+
+.storyTitle{
+
+}
+
+.storyTitle::before{
+
 }
 
 .lightText {
-    color: #999;
+  color: #999;
+}
+
+.heading {
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.title::after {
+  content: "";
+  width: 75%;
+  border: 0.5px solid #666666;
+  margin-left: 5rem;
+  align-self: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 2rem;
+}
+
+.viewStories {
+  font-family: TTNormsPro;
+  border: 1px solid #fefefe;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: transparent;
+  z-index: 1;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(500px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (min-width: 500px) {
+}
+
+@media screen and (min-width: 800px) {
+  .viewStories:hover {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .viewStories {
+    font-family: TTNormsPro;
+    padding: 0.5rem 1rem;
+  }
+
+  .padding {
+    padding-top: 30px;
+  }
 }

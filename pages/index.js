@@ -36,7 +36,7 @@ export default function Hi() {
             <a>EXPLORE STORIES</a>
           </Link>
           <Link href="/add-story">
-            <a>SHARE YOURS &emsp; &ensp;+</a>
+            <a>SHARE YOURS &ensp; +</a>
           </Link>
         </div>
       </div>

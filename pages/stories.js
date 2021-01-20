@@ -10,7 +10,7 @@ export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData,
+      allPostsData
     },
   };
 }
@@ -22,21 +22,28 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <h1>2020 Year in Review</h1>
-        <p>FEATURED STORIES</p>
+        <h1 className={utilStyles.heading}>2020 Year in Review</h1>
+        <p className={utilStyles.title}>FEATURED STORIES</p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding}`}>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, image, title, name }) => (
             <li className={utilStyles.listItem} key={id}>
               <img src={image} />
               <Link href={`/posts/${id}`}>
-                <a>{title}</a>
+                <a className={utilStyles.storyTitle}>{title}</a>
               </Link>
-              <p>{name}</p>
+              <p className={utilStyles.storyAuthor}>{name}</p>
             </li>
           ))}
         </ul>
+      </section>
+      <section className={utilStyles.buttonContainer}>
+        <button className={utilStyles.viewStories}>
+          <Link href="/">
+            <a>VIEW MORE STORIES</a>
+          </Link>
+        </button>
       </section>
     </Layout>
   );
