@@ -6,12 +6,13 @@
     overflow: hidden;
     background-color: #080604;
     box-shadow: 0px 2px 2px #e0dede;
+    z-index: 1;
 }
 
 .navbar {
     width: 85%;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 1rem 0;
 }
 
 .navbarToggle {
@@ -72,12 +73,11 @@
 
 @media screen and (min-width: 800px) {
     .navbar {
-        width: 75%;
         margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 0;
+        /* padding: 1.5rem 0; */
     }
 
     .navbarToggle {
@@ -85,7 +85,7 @@
     }
 
     .name {
-        font-size: 2rem;
+        width: 2rem;
     }
 
     .mainNavbar {
@@ -101,6 +101,7 @@
 
     .navLinks {
         margin: 0 10px;
+        font-size: 1.5rem;
     }
 
     .current {
@@ -111,13 +112,5 @@
 @media screen and (min-width: 1440px) {
     .navbar {
         width: 85%;
-    }
-
-    .name {
-        font-size: 2.5rem;
-    }
-
-    .navLinks {
-        font-size: 1.5rem;
     }
 }

@@ -1,8 +1,8 @@
 ---
-title: 'Waving that flag changed my life.'
-image: /images/happy.png
-twitter: 'https://twitter/onyeepeace'
-name: 'Morgan Jay'
+title: 'I said No, and saved lives.'
+image: /images/Ada_image.png
+twitter: 'https://twitter/praizux'
+name: Ada
 ---
 
 In her presidential campaign last year, Kamala Harris pitched herself as a history-making candidate who could appeal to both progressives and moderates. Rather than trying to upend the economy, her policies sought incremental, targeted results, particularly focusing on historically marginalized groups like women, people of color and low-income Americans.

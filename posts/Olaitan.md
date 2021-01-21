@@ -1,8 +1,8 @@
 ---
 title: 'I said No, and saved lives.'
-image: /images/smiling.png
+image: /images/Olaitan_image.png
 twitter: 'https://twitter/praizux'
-name: Praiz Ux
+name: Olaitan
 ---
 
 In her presidential campaign last year, Kamala Harris pitched herself as a history-making candidate who could appeal to both progressives and moderates. Rather than trying to upend the economy, her policies sought incremental, targeted results, particularly focusing on historically marginalized groups like women, people of color and low-income Americans.

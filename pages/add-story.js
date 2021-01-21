@@ -1,9 +1,9 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { useState } from 'react';
 import Example from '../components/modal';
 import Layout, { siteTitle } from '../components/layout'
 import Terms from './terms'
-import { Modal } from 'react-bootstrap';
 
 function goFurther() {
     if (document.getElementById("checkbox").checked == true)
@@ -15,13 +15,8 @@ function goFurther() {
 const Add = () => {
     const [show, setShow] = useState(false);
 
-    const handleClose = (e) => {
+    const handleClose = () => {
         setShow(false);
-    };
-
-    const onShare = () => {
-        handleClose();
-        setShow(true)
     };
 
     const [mode, setMode] = useState('')
@@ -150,8 +145,10 @@ const Add = () => {
                     <div className='field is-grouped'>
                         <div className='control'>
                             <p className="check">
-                                <input type="checkbox" name="checkbox" id="checkbox" onClick={goFurther} /> I accept the {''}
-                                <span style={{ textDecoration: 'underline' }} onClick={onShare}>Terms and Conditions</span> for hostong my story on Retrogram
+                                <input type="checkbox" name="checkbox" id="checkbox" onClick={goFurther} /> I accept the {' '}
+                                <Link href='/terms'>
+                                    <a style={{ textDecoration: 'underline' }}>Terms and Conditions</a>
+                                </Link> for hosting my story on RetroGram
                             </p>
                             <button className='button is-primary' id="submit" type='submit' disabled>
                                 Submit
@@ -163,10 +160,6 @@ const Add = () => {
             {mode && mode === 'pop-up'}
             <Example show={show} handleClose={handleClose} footerButton={footerButton}>
                 <h1>Thanks for Submitting</h1>
-            </Example>
-            <Example show={show}>
-                <Modal.Header onClick={handleClose} closeButton />
-                <Terms />
             </Example>
         </Layout>
     );

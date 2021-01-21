@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import styles from '../components/layout.module.css'
 export default function Terms() {
 
     return (
@@ -22,6 +24,11 @@ export default function Terms() {
                 <li>- All the terms stated above will remain the same for the duration of which RetroGram will be live on the
                 internet. If they at any point change we will email you prior to the changes being made.</li>
             </ul>
+            <div className={styles.backToHome}>
+                <Link href="/add-story">
+                    <a>← Back to form</a>
+                </Link>
+            </div>
         </div>
     )
 }
