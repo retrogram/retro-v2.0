@@ -1,6 +1,6 @@
 ---
 title: 'I said No, and saved lives.'
-image: /images/smiling.png
+image: /images/frame 2.png
 twitter: 'https://twitter/praizux'
 name: Praiz Ux
 ---

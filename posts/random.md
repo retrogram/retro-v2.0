@@ -1,6 +1,6 @@
 ---
 title: 'I didn’t even know her, but I cried.'
-image: /images/frame 3.png
+image: /images/frame5.png
 twitter: 'https://twitter/onyeepeace'
 name: 'Onyee Peace'
 ---

@@ -1,27 +1,51 @@
+@font-face {
+  font-family: "TTNormsPro";
+  src: url(/fonts/TTNormsPro/TT\ Norms\ Pro\ Regular.otf);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTNormsPro";
+  src: url(/fonts/TTNormsPro/TT\ Norms\ Pro\ Medium.woff);
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: Canela;
+  src: url(/fonts/Canela/Canela-Regular.ttf);
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    /* line-height: 1.6; */
-    font-size: 18px;
-    background-color: #080604;
-    color: #ffffff;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 18px;
+  background-color: #080604;
+  color: #ffffff;
+  /* overflow: hidden; */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
