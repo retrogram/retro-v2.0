@@ -40,13 +40,15 @@
 @media screen and (min-width: 800px) {
   .main {
     width: 75%;
-    margin-top: 7rem;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .main {
-    margin: 8rem 7rem auto 12rem;
+    /* margin: 8rem 4rem auto 15rem; */
     width: 75%;
+    margin: 8rem auto 0;
   }
 }

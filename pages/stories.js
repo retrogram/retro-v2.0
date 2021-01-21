@@ -15,6 +15,14 @@ export async function getStaticProps() {
   };
 }
 
+function handleClick(e) {
+  e.preventDefault();
+  const storiesList = document.getElementById("js-list");
+  storiesList.classList.add("openStories");
+  e.target.style.display = "none";
+}
+
+
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
@@ -26,23 +34,25 @@ export default function Home({ allPostsData }) {
         <p className={utilStyles.title}>FEATURED STORIES</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding}`}>
-        <ul className={utilStyles.list}>
+        <ul className={utilStyles.list} id="js-list">
           {allPostsData.map(({ id, image, title, name }) => (
             <li className={utilStyles.listItem} key={id}>
-              <img src={image} />
               <Link href={`/posts/${id}`}>
+              <div className={utilStyles.storyContainer}> 
+              <img src={image} alt="Author Image" className={utilStyles.storyImage}/>
+                <div className={utilStyles.storyInfo}>
                 <a className={utilStyles.storyTitle}>{title}</a>
+                <p className={utilStyles.storyAuthor}>{name}</p>
+              </div>
+              </div>
               </Link>
-              <p className={utilStyles.storyAuthor}>{name}</p>
             </li>
           ))}
         </ul>
       </section>
       <section className={utilStyles.buttonContainer}>
-        <button className={utilStyles.viewStories}>
-          <Link href="/">
-            <a>VIEW MORE STORIES</a>
-          </Link>
+        <button className={utilStyles.viewStories} onClick={handleClick}>
+            VIEW MORE STORIES
         </button>
       </section>
     </Layout>

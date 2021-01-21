@@ -1,8 +1,8 @@
 ---
-title: '2020 gave me a lot, but the price was great.'
-image: /images/frame1.png
+title: 'I said NO, and saved lives.'
+image: /images/frame4.png
 twitter: 'https://twitter/jay__jm'
-name: 'Morgan Jay'
+name: 'kachi_with'
 # share: 'https://twitter.com/intent/tweet?text=Check%20out%20my%20year%20in%20review%20here%20https%3A//retroo.xyz/'
 readMore: 'https://'
 ---

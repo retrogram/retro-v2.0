@@ -35,75 +35,77 @@
   color: inherit;
 }
 
+.heading {
+  font-size: 64px;
+  font-weight: 400;
+  font-family: Canela;
+}
+
 .padding {
-  padding-top: 1px;
+  padding-top: 2px;
 }
 
 .list {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
   animation-name: bounceIn;
   animation-duration: 1s;
 }
 
-.listItem {
+.listItem{
   margin: 0 0 1.25rem;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.11) 0%, #000000 94.79%);
-  border-radius: 6px;
-  width: 351px;
-  height: 344px;
+  position: relative;
 }
 
-.storyTitle{
+.storyInfo{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 200px;
+    height: 91px;
+    font-family: Canela;
+    filter: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
-}
-
-.storyTitle::before{
-
+.storyAuthor{
+      font-family: TTNormsPro;
+      font-weight: 400;
+      font-size: 16px;
+      justify-self: flex-end;
 }
 
 .lightText {
   color: #999;
 }
 
-.heading {
-  font-size: 64px;
-  font-weight: 400;
-}
 
-.title {
-  font-weight: 500;
-  font-size: 20px;
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.title::after {
-  content: "";
-  width: 75%;
-  border: 0.5px solid #666666;
-  margin-left: 5rem;
-  align-self: center;
-}
-
-.buttonContainer {
+.buttonContainer{
   display: flex;
   justify-content: center;
   align-content: center;
   margin-top: 2rem;
 }
 
-.viewStories {
+.storyAuthor::before{
+  content: url(/images/TwitterIcon.svg);
+  margin-right: 1rem;
+}
+
+.viewStories{
   font-family: TTNormsPro;
   border: 1px solid #fefefe;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   background: transparent;
   z-index: 1;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ffffff;
 }
 
 @keyframes bounceIn {
@@ -119,21 +121,124 @@
 }
 
 @media screen and (min-width: 500px) {
+  
+.title{
+  font-weight: 400;
+  font-size: 20px;
+  display: flex;
+  width: 110%;
+  justify-content: space-between;
+  flex: 0 0 auto;
+}
+
+.title::after{
+  content: "";
+  width: 77%;
+  border: 0.5px solid #666666;
+  align-self: center;
+  justify-content: flex-end;
+  justify-self: flex-end;
+  flex: 0 1 auto;
+}
+
+.buttonContainer{
+  margin-top: 2rem;
+}
 }
 
 @media screen and (min-width: 800px) {
-  .viewStories:hover {
-    opacity: 0.5;
+.list {
+    display: flex;
+    justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  max-height: 350px;
+}
+
+.openStories{
+    margin-bottom: 2rem;
+    max-height: 1200px;
+    overflow: visible,;
   }
+
+.listItem{
+  margin-top: 1rem;
+}
+
+.buttonContainer{
+  margin-top: 0;
+}
+.viewStories:hover {
+  opacity: 0.5;
+}
+
+.storyContainer{
+  border-radius: 6px;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  /* background-image: url(/images/happy.png); */
+}
+
+.storyContainer:hover{
+  opacity: 1;
+  filter: none;
+  transform: scale(1.1);
+}
+
+.storyImage{
+  filter: grayscale(100%);
+}
+
+.storyImage:hover{
+  filter: none;
+}
+
+/* .storyImage::before{
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.11) 0%, #000000 94.79% );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+} */
+
+/* .storyImage:hover::before{
+  display: none;
+} */
+
+.storyInfo{
+  width: 220px;
+  }
+
+.viewStories{
+  padding: 0.5rem 1rem;
+}
+
+.padding {
+  padding-top: 30px;
+}
+
 }
 
 @media screen and (min-width: 1440px) {
-  .viewStories {
-    font-family: TTNormsPro;
-    padding: 0.5rem 1rem;
-  }
+  .storyContainer{
+    width: 351px;
+  height: 344px;
+}
 
-  .padding {
-    padding-top: 30px;
-  }
+
+.title{
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.title::after{
+  width: 77%;
+  flex: 0 1 auto;
+}
+
+.buttonContainer{
+  margin-top: 7rem;
+}
 }
