@@ -57,13 +57,19 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-size: 16px;
+    width: 283px;
+    display: flex;
+}
+
+.terms{
+    margin-left: 1rem;
 }
 
 .checkboxContainer{
     font-size: 16px;
     display: inline-block;
     position: relative;
-    padding-left: 10px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -72,21 +78,16 @@
 }
 
 .checkbox{
-    position: absolute;
     opacity: 0;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    top: -15px;
-    left: -20px;
 }
 
-.mark{
+.checkbox, .mark{
     position: absolute;
-    top: -10px;
+    top: 3px;
     left: -20px;
     border: 1px solid #FFFFFF;
     width: 20px;
+    cursor: pointer;
     height: 20px;
     border-radius: 2px;
 }
@@ -138,6 +139,14 @@
     .heading{
         width: auto;
     }
+     .label{
+        font-size: 20px;
+    }
+
+    .input{
+        width: 100%;
+        font-size: 20px;
+    }
 } 
 
 @media screen and (min-width: 800px) {
@@ -150,7 +159,6 @@
     }
 
     .input{
-        width: 100%;
         height: 60px;
         font-size: 24px;
     }
@@ -184,11 +192,10 @@
     }
 
     .check{
-      font-size: 16px;
       width: 383px;
       display: flex;
     }
-    
+
     .terms{
         width: 300px;
     }
