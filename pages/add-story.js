@@ -75,24 +75,12 @@ const Add = () => {
                     method='post'
                     onSubmit={handleSubmit}
                 >
-                     <div className={Styles.field}>
-                        <label className={Styles.label}>Please enter your story below</label>
-                            <textarea
-                                className={`${Styles.input} ${Styles.storyInput}`}
-                                type='text'
-                                name='story'
-                                onChange={handleChange}
-                                required
-                            />
-                    </div>
-
                     <div className={Styles.field}>
                         <label className={Styles.label} >What's your name?</label>
                         <div className={Styles.control}>
                             <input
                                 className={Styles.input}
                                 type='text'
-                                placeholder='Name'
                                 name='name'
                                 onChange={handleChange}
                                 required
@@ -105,7 +93,6 @@ const Add = () => {
                             <input
                                 className={Styles.input}
                                 type='email'
-                                placeholder='Email'
                                 name='email'
                                 onChange={handleChange}
                                 required
@@ -118,25 +105,11 @@ const Add = () => {
                             <input
                                 className={Styles.input}
                                 type='url'
-                                placeholder='Twitter URL'
                                 name='twitter'
                                 onChange={handleChange}
                                 required
                             />
                         </div>
-                    </div>
-
-                     <div className={`${Styles.field} ${Styles.imageField}`}>               
-                            {/* <input
-                                className={Styles.fileUpload}
-                                type='file'
-                                name='image'
-                                // onChange={handleChange}
-                            /> */}
-                             <p className={Styles.uploadText}>Upload an image for your story
-                            (Max size 2MB)
-                            </p>
-                            <input type="file" className={Styles.upload}/> 
                     </div>
 
                     <div className={Styles.field}>
@@ -145,7 +118,6 @@ const Add = () => {
                             <input
                                 className={Styles.input}
                                 type='url'
-                                placeholder='Story URL'
                                 name='story'
                                 onChange={handleChange}
                                 required
