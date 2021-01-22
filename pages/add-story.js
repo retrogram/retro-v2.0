@@ -146,10 +146,11 @@ const Add = () => {
                                 <label className={Styles.checkboxContainer}>
                                 <input type="checkbox" name="checkbox" id="checkbox" className={Styles.checkbox} onClick={goFurther} /> 
                                 <span class={Styles.mark}></span>
-                                </label>I accept the {' '}
+                                </label>
+                                <span className={Styles.terms}>I accept the {' '}
                                 <Link href='/terms'>
                                     <a style={{ textDecoration: 'underline' }}> Terms and Conditions</a>
-                                </Link><br></br> &ensp;for hosting my story on RetroGram.
+                                </Link> for hosting my story on RetroGram.</span>
                             </p>
                             <button className={`${Styles.button} ${Styles.isPrimary}`} id="submit" type='submit' disabled>
                                 Submit
