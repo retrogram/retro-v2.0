@@ -1,0 +1,61 @@
+.container{
+    margin: auto 1.5rem;
+    padding: 1rem;
+    font-family: TTNormsPro;
+    font-size: 16px;
+    font-weight: 400;
+    animation: fadeIn ease 2s; 
+    animation-fill-mode: forwards; 
+    text-align: justify;
+}
+
+.heading{
+    font-family: Canela;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+@keyframes fadeIn{  
+    0% {  
+        opacity: 0;  
+    }  
+    100% {  
+        opacity: 1;  
+    }  
+}  
+
+@media screen and (min-width: 500px){
+    .container{
+        margin: 0 3.5rem;
+        padding: 0 2.5rem;
+    }
+    .heading{
+        font-size: 42px;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .container{
+        margin: 0 5rem;
+        padding: 0 4rem;
+        height: 90vh;
+    }
+    .heading{
+        font-size: 48px;
+        margin-top: 3rem;
+    }
+} 
+ 
+@media screen and (min-width: 1440px) { 
+    .container{
+        margin: 0 7rem;
+        padding: 0 6rem;
+    }
+    .heading{
+        font-size: 54px;
+        margin-top: 5rem;
+    }
+} 
