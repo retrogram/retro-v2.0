@@ -1,15 +1,21 @@
-import Head from 'next/head'
-import styles from './layout.module.css'
+import Head from "next/head";
+import styles from "./layout.module.css";
 // import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
-import navStyles from './navbar.module.css';
+import Link from "next/link";
+import navStyles from "./navbar.module.css";
 
-export const siteTitle = 'RetroGram'
+export const siteTitle = "RetroGram";
 
 function handleClick(e) {
     e.preventDefault();
-    const mainNav = document.getElementById('js-menu');
+    const mainNav = document.getElementById("js-menu");
     mainNav.classList.toggle(`${navStyles.active}`);
+    if (mainNav.classList.contains(`${navStyles.active}`)) {
+        e.target.innerHTML = `x`;
+    }
+    else {
+        e.target.innerHTML = `&#9776;`;
+    }
 }
 
 export default function Layout({ children }) {
@@ -17,10 +23,7 @@ export default function Layout({ children }) {
         <div>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
-                <meta
-                    name="description"
-                    content="Share your year in review"
-                />
+                <meta name="description" content="Share your year in review" />
                 <meta
                     property="og:image"
                     content={`https://og-image.now.sh/${encodeURI(
@@ -32,7 +35,12 @@ export default function Layout({ children }) {
             </Head>
             <header className={navStyles.header}>
                 <nav className={navStyles.navbar}>
-                    <span className={navStyles.navbarToggle} id="js-navbar-toggle" onClick={handleClick}>&#9776;</span>
+                    <span
+                        className={navStyles.navbarToggle}
+                        id="js-navbar-toggle"
+                        onClick={handleClick}>
+                        &#9776;
+                    </span>
 
                     <div className="left-nav">
                         <Link href='/'>
@@ -45,7 +53,13 @@ export default function Layout({ children }) {
                     <div className={navStyles.rightNav}>
                         <ul className={navStyles.mainNavbar} id="js-menu">
                             <li className={navStyles.mainNavlist}>
-                                <a href='https://retroo.xyz' target='_blank' className={navStyles.navLinks}>2019</a>
+                                <a
+                                    href="https://retroo.xyz"
+                                    target="_blank"
+                                    className={navStyles.navLinks}
+                                    rel="noopener">
+                                    2019
+                                </a>
                             </li>
 
                             <li className={navStyles.mainNavlist}>
@@ -56,7 +70,17 @@ export default function Layout({ children }) {
 
                             <li className={navStyles.mainNavlist}>
                                 <Link href="/add-story">
-                                    <a className={navStyles.navLinks}>Add Your Story</a>
+                                    <a className={navStyles.storiesLink}>
+                                        Add Your Story &nbsp;+
+                                    </a>
+                                </Link>
+                            </li>
+
+                            <li className={navStyles.mainNavlist}>
+                                <Link href="/add-story">
+                                    <a className={navStyles.shareLink}>
+                                        Share Yours&emsp; +
+                                    </a>
                                 </Link>
                             </li>
                         </ul>
@@ -65,5 +89,5 @@ export default function Layout({ children }) {
             </header>
             <main className={styles.main}>{children}</main>
         </div>
-    )
+    );
 }

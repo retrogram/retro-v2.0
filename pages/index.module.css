@@ -1,4 +1,119 @@
+.title {
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.caption {
+  margin-top: 1rem;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
 .cta {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.2rem;
+}
+
+.cta a:hover {
+  opacity: 0.5;
+}
+
+.cta > :first-child {
+  border: 1px solid #fefefe;
+  border-radius: 3px;
+  padding: 0.5rem 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.cta > :first-child::after {
+  margin-left: 0.7rem;
+  content: url(/images/Vector.svg);
+}
+
+.cta > :last-child {
+  border-radius: 3px;
+  background-color: #2b3635;
+  padding: 0.5rem 2rem;
+  padding-left: 1.3rem;
+}
+
+.yearLogo {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Media query */
+@media screen and (min-width: 500px) {
+  .caption {
+    font-size: 21px;
+  }
+
+  .homepage {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .homepage {
+    width: 100%;
+  }
+
+  .yearLogo[src] {
+    content: url("/images/2020.svg");
+    width: 85%;
+    margin: auto;
+  }
+
+  .cta {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .cta > :first-child {
+    border: 1px solid #fefefe;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .cta > :last-child {
+    margin-left: 2rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 0.9rem;
+  }
+
+  .caption {
+    margin-top: 2rem;
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .caption {
+    margin-top: 4rem;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .cta {
+    margin-top: 2rem;
+  }
+
+  .cta > :last-child {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0.8rem 1.5rem;
+  }
 }
