@@ -81,7 +81,6 @@ const Add = () => {
                             <input
                                 className={Styles.input}
                                 type='text'
-                                placeholder='Name'
                                 name='name'
                                 onChange={handleChange}
                                 required
@@ -94,7 +93,6 @@ const Add = () => {
                             <input
                                 className={Styles.input}
                                 type='email'
-                                placeholder='Email'
                                 name='email'
                                 onChange={handleChange}
                                 required
@@ -107,7 +105,6 @@ const Add = () => {
                             <input
                                 className={Styles.input}
                                 type='url'
-                                placeholder='Twitter URL'
                                 name='twitter'
                                 onChange={handleChange}
                                 required
@@ -121,7 +118,6 @@ const Add = () => {
                             <input
                                 className={Styles.input}
                                 type='url'
-                                placeholder='Story URL'
                                 name='story'
                                 onChange={handleChange}
                                 required
