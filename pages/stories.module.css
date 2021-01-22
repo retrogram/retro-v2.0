@@ -1,0 +1,55 @@
+.heading {
+    font-size: 48px;
+    font-weight: 400;
+    font-family: Canela;
+}
+
+.storiesImage {
+    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: filter 0.7s ease-in-out;
+}
+
+.storiesImage:hover {
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    filter: none;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation-name: bounceIn;
+    animation-duration: 1s;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(500px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .heading {
+        font-size: 64px;
+    }
+}

@@ -1,9 +1,11 @@
-import Head from "next/head";
-import Link from "next/link";
-import Layout, { siteTitle } from "../components/layout";
-import homeStyles from "./index.module.css";
+import React from 'react';
+import Head from 'next/head'
+import Link from 'next/link'
+import Layout, { siteTitle } from '../components/layout'
+import homeStyles from './index.module.css'
 
 export default function Hi() {
+
   return (
     <Layout>
       <Head>

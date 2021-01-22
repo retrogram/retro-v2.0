@@ -1,10 +1,9 @@
 ---
-title: '2020 gave me a lot, but the price was great.'
-image: /images/happy.png
-twitter: 'https://twitter/jay__jm'
-name: 'Morgan Jay'
-# share: 'https://twitter.com/intent/tweet?text=Check%20out%20my%20year%20in%20review%20here%20https%3A//retroo.xyz/'
-readMore: 'https://'
+title: 'The time stopped but lives moved!'
+image: /images/praiz.png
+twitter: 'https://twitter.com/praizux'
+name: PraizUX
+story_link: 'https://onyeepeace.com'
 ---
 
 In her presidential campaign last year, Kamala Harris pitched herself as a history-making candidate who could appeal to both progressives and moderates. Rather than trying to upend the economy, her policies sought incremental, targeted results, particularly focusing on historically marginalized groups like women, people of color and low-income Americans.
