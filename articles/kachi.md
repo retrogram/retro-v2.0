@@ -1,8 +1,9 @@
 ---
-title: 'I said No, and saved lives.'
-image: /images/Ada_image.png
-twitter: 'https://twitter/praizux'
-name: Ada
+title: '2020 gave me a lot, but the price was great.'
+image: /images/kachi.png
+twitter: 'https://twitter.com/praizux'
+name: kachi_with
+story_link: 'https://onyeepeace.com'
 ---
 
 In her presidential campaign last year, Kamala Harris pitched herself as a history-making candidate who could appeal to both progressives and moderates. Rather than trying to upend the economy, her policies sought incremental, targeted results, particularly focusing on historically marginalized groups like women, people of color and low-income Americans.

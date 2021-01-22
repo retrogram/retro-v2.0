@@ -23,7 +23,7 @@ export default function Home({ allPostsData }) {
                 <title>{siteTitle}</title>
             </Head>
             <section>
-                <h1>2020 Year in Review</h1>
+                <h1 className={storiesStyles.heading}>2020 Year in Review</h1>
                 <p>FEATURED STORIES</p>
             </section>
             <section>

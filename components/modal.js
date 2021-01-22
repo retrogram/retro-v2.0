@@ -1,5 +1,4 @@
 import { Modal } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Example(props) {
 

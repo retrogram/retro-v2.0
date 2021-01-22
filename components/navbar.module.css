@@ -5,14 +5,14 @@
     top: 0;
     overflow: hidden;
     background-color: #080604;
-    box-shadow: 0px 2px 2px #e0dede;
     z-index: 1;
 }
 
 .navbar {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     padding: 1rem 0;
+    font-family: TTNormsPro;
 }
 
 .navbarToggle {
@@ -35,8 +35,9 @@
 
 .mainNavlist {
     list-style: none;
-    margin: 15px auto;
+    margin: 25px auto;
     text-align: center;
+    color: #fefefe;
 }
 
 .navLinks {
@@ -44,18 +45,37 @@
     font-size: 1rem;
 }
 
+.navLinks::after {
+    content: '';
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    border: 0.5px solid #666666;
+    margin-top: 0.5rem;
+}
+
+.storiesLink {
+    display: none;
+}
+
+.shareLink {
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 3px;
+    background-color: #2b3635;
+    padding: 0.5rem 1.5rem;
+    margin-top: 4rem;
+}
+
 .name:hover,
 .rightNav a:hover {
     opacity: 0.5;
 }
 
-.current {
-    padding-bottom: 0.2rem;
-    border-bottom: 4px solid #ffd254;
-}
-
 .active {
     display: block;
+    margin: 6rem 0;
 }
 
 /* Media query */
@@ -70,16 +90,28 @@
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
     .navbar {
-        margin: 0 auto;
+        width: 75%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        /* padding: 1.5rem 0; */
+        padding: 1.5rem 0;
     }
 
     .navbarToggle {
+        display: none;
+    }
+
+    .navLinks {
+        text-transform: uppercase;
+    }
+
+    .navLinks::after {
+        display: none;
+    }
+
+    .shareLink {
         display: none;
     }
 
@@ -100,16 +132,35 @@
 
     .navLinks {
         margin: 0 10px;
-        font-size: 1.5rem;
     }
 
-    .current {
-        padding-bottom: 0.2rem;
+    .storiesLink {
+        text-decoration: none;
+        font-size: 1rem;
+        text-transform: uppercase;
+        border: 1px solid #fefefe;
+        padding: 0.5rem 1rem;
+        border-radius: 3px;
+        margin-left: 20px;
+        display: initial;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .navbar {
-        width: 85%;
+        width: 75%;
+    }
+
+    .name {
+        width: 2.5rem;
+    }
+
+    .navLinks {
+        font-size: 1.2rem;
+        margin: 0 30px;
+    }
+
+    .storiesLink {
+        font-size: 1.2rem;
     }
 }
