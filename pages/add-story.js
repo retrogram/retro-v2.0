@@ -143,7 +143,7 @@ const Add = () => {
                     <div className={`${Styles.field} ${Styles.isGrouped}`}>
                         <div className={Styles.control}>
                             <p className={Styles.check}>
-                                <label className={Styles.checkContainer}>
+                                <label className={Styles.checkboxContainer}>
                                 <input type="checkbox" name="checkbox" id="checkbox" className={Styles.checkbox} onClick={goFurther} /> 
                                 <span class={Styles.mark}></span>
                                 </label>I accept the {' '}
