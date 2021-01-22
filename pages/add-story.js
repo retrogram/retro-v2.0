@@ -58,7 +58,7 @@ const Add = () => {
             console.log('An error occurred', e);
             setResponse({
                 type: 'error',
-                message: 'An error occured while submitting the form'
+                message: 'An error occurred while submitting the form'
             });
         }
     };
