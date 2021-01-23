@@ -1,0 +1,206 @@
+.columnContent{ 
+    animation: fadeIn ease 2s; 
+    animation-fill-mode: forwards;  
+} 
+
+@keyframes fadeIn{  
+    0% {  
+        opacity: 0;  
+    }  
+    100% {  
+        opacity: 1;  
+     }  
+}  
+
+.heading{ 
+    font-family: Canela; 
+    font-weight: normal; 
+    font-size: 36px; 
+    color: #FFFFFF; 
+    width: 306px;
+    margin-bottom: 3rem;
+} 
+
+.field{ 
+    margin-bottom: 1rem;
+} 
+
+.label{
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.input{ 
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #FFFFFF;
+    margin-top: 0.5rem;
+    border-radius: 3px;
+    width: 302px;
+    height: 53px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-family: TTNormsPro;
+    font-size: 16px;
+} 
+
+.storyInput{
+    height: 400px;
+    margin-bottom: 2rem;
+}
+
+.check{
+    margin-left: 1rem;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 16px;
+    width: 283px;
+    display: flex;
+}
+
+.terms{
+    margin-left: 1rem;
+}
+
+.checkboxContainer{
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox{
+    opacity: 0;
+}
+
+.checkbox, .mark{
+    position: absolute;
+    top: 3px;
+    left: -20px;
+    border: 1px solid #FFFFFF;
+    width: 20px;
+    cursor: pointer;
+    height: 20px;
+    border-radius: 2px;
+}
+
+.checkbox:checked ~ .mark{
+   background-color: transparent;
+}
+
+.mark::after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox:checked ~ .mark::after{
+    display: block;
+}
+
+.mark::after{
+    left: 9px;
+    bottom: 3px;
+    width: 5px;
+    height: 15px;
+    border: solid #FFFFFF;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.button:disabled{
+    opacity: 0.3;
+}
+
+.button{
+    margin-top: 2rem;
+    border: 1px solid #FFFFFF;
+    width: 300px;
+    height: 64px;
+    background-color: transparent;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: TTNormsPro;
+    font-size: 16px;
+}
+
+
+@media screen and (min-width: 500px) { 
+    .heading{
+        width: auto;
+    }
+     .label{
+        font-size: 20px;
+    }
+
+    .input{
+        width: 100%;
+        font-size: 20px;
+    }
+} 
+
+@media screen and (min-width: 800px) {
+    .heading{
+        font-size: 70px;
+    }
+
+    .label{
+        font-size: 24px;
+    }
+
+    .input{
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .isGrouped{
+        margin-top: 4rem;
+    }
+
+    .control{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .checkbox, .mark{
+        top: 7px;
+        left: -18px;
+    }
+
+    .button{
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .button:disabled{
+        cursor: unset;
+    }
+
+    .checkboxContainer{
+        padding-left: 2rem;
+    }
+
+    .check{
+      width: 383px;
+      display: flex;
+    }
+
+    .terms{
+        width: 300px;
+    }
+} 
+ 
+@media screen and (min-width: 1440px) { 
+
+} 
