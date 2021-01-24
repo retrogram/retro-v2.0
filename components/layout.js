@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "./layout.module.css";
-// import utilStyles from '../styles/utils.module.css'
 import Link from "next/link";
 import navStyles from "./navbar.module.css";
 
@@ -22,7 +21,7 @@ export default function Layout({ children }) {
     return (
         <div>
             <Head>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/images/Retrogram-logo.svg" sizes="192x192" />
                 <meta name="description" content="Share your year in review" />
                 <meta
                     property="og:image"

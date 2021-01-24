@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { useState } from 'react';
 import Example from '../components/modal';
 import Layout, { siteTitle } from '../components/layout'
-import Terms from './terms'
+import Terms from '../components/terms'
 import Styles from './add-story.module.css'
+import modalStyles from '../components/modal.module.css'
 
 function goFurther() {
     if (document.getElementById("checkbox").checked == true)
@@ -14,15 +14,31 @@ function goFurther() {
 }
 
 const Add = () => {
-    const [show, setShow] = useState(false);
+    const [status, setStatus] = useState(false);
 
-    const handleClose = () => {
-        setShow(false);
+    const handleOpen = () => {
+        setStatus(true);
+        document.body.style = 'overflow: hidden'
     };
 
-    const [mode, setMode] = useState('')
+    const handleClose = () => {
+        setStatus(false);
+        document.body.style = 'overflow: auto'
+    };
 
-    const footerButton = <button onClick={handleClose}>OK</button>
+    const [show, setShow] = useState(false);
+
+    const handleOn = () => {
+        setShow(true);
+        document.body.style = 'overflow: hidden'
+    };
+
+    const handleOff = () => {
+        setShow(false);
+        document.body.style = 'overflow: auto'
+    };
+
+    const footer = <button className={modalStyles.okBtn} onClick={handleClose}>OK</button>
 
     const [contact, setContact] = useState({
         name: '',
@@ -49,9 +65,9 @@ const Add = () => {
             });
 
             if (res.status === 200) {
-                setMode('pop-up');
-                setShow(true);
-                setContact(e.target.reset())
+                handleOpen();
+                setContact(e.target.reset());
+                document.getElementById("submit").disabled = true;
             }
 
         } catch (e) {
@@ -144,13 +160,12 @@ const Add = () => {
                         <div className={Styles.control}>
                             <p className={Styles.check}>
                                 <label className={Styles.checkboxContainer}>
-                                <input type="checkbox" name="checkbox" id="checkbox" className={Styles.checkbox} onClick={goFurther} /> 
-                                <span class={Styles.mark}></span>
+                                    <input type="checkbox" name="checkbox" id="checkbox" className={Styles.checkbox} onClick={goFurther} />
+                                    <span class={Styles.mark}></span>
                                 </label>
                                 <span className={Styles.terms}>I accept the {' '}
-                                <Link href='/terms'>
-                                    <a style={{ textDecoration: 'underline' }}> Terms and Conditions</a>
-                                </Link> for hosting my story on RetroGram.</span>
+                                    <a onClick={handleOn} style={{ textDecoration: 'underline' }}> Terms and Conditions</a>
+                                    {' '}for hosting my story on RetroGram.</span>
                             </p>
                             <button className={`${Styles.button} ${Styles.isPrimary}`} id="submit" type='submit' disabled>
                                 Submit
@@ -159,10 +174,18 @@ const Add = () => {
                     </div>
                 </form>
             </div>
-            {mode && mode === 'pop-up'}
-            <Example show={show} handleClose={handleClose} footerButton={footerButton}>
-                <h1>Thanks for Submitting</h1>
-            </Example>
+            {status && (
+                <Example closeModal={handleClose} footer={footer}>
+                    <div className={modalStyles.submit}>
+                        <h2 className={modalStyles.submitNote}>Thank you for your submission. You will be notified when it goes live!</h2>
+                    </div>
+                </Example>
+            )}
+            {show && (
+                <Example closeModal={handleOff}>
+                    <Terms />
+                </Example>
+            )}
         </Layout>
     );
 };

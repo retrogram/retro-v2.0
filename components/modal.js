@@ -1,22 +1,34 @@
-import { Modal } from 'react-bootstrap';
+import React from 'react';
+import modalStyles from './modal.module.css'
+import { Close } from '@styled-icons/remix-fill/Close'
 
 export default function Example(props) {
+    const { closeModal } = props;
+    const closeicon = () => (
+        <Close
+            className={modalStyles.closeIcon}
+            onClick={closeModal}
+            style={{
+                color: '#ffffff',
+                cursor: 'pointer',
+                position: 'absolute',
+                top: '1.5rem',
+                right: '1.5rem',
+            }}
+        />
+    );
 
     return (
         <>
-            <Modal
-                show={props.show}
-                onHide={props.handleClose}
-                backdrop="static"
-                keyboard={false}
-            >
-                <Modal.Body>
+            <div className={modalStyles.overlay}>
+                <div className={modalStyles.content}>
+                    {closeicon()}
                     {props.children}
-                </Modal.Body>
-                <Modal.Footer>
-                    {props.footerButton}
-                </Modal.Footer>
-            </Modal>
+                    <div>
+                        {props.footer}
+                    </div>
+                </div>
+            </div>
         </>
     );
 }

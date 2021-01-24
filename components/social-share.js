@@ -7,28 +7,24 @@ import {
     LinkedinShareButton
 } from "react-share";
 
-import { Whatsapp } from '@styled-icons/remix-fill/Whatsapp'
-import { FacebookBox } from '@styled-icons/remix-fill/FacebookBox'
-import { Twitter } from '@styled-icons/remix-fill/Twitter'
-import { Mail } from '@styled-icons/material-twotone/Mail'
-import { LinkedinBox } from '@styled-icons/remix-fill/LinkedinBox'
+import modalStyles from './modal.module.css'
 
 export default function Social(props) {
     return (
-        <div>
+        <div className={modalStyles.container}>
             <WhatsappShareButton
                 url={props.url}
                 title={'Read the best collection of people’s 2020 Year in Review stories.'}
                 seperator={''}
             >
-                <Whatsapp size={64} style={{ color: '#25D366' }} />
+                <img src="/images/whatsapp.png" alt="whatsapp logo" className={modalStyles.icon} />
             </WhatsappShareButton>
             <FacebookShareButton
                 url={props.url}
                 quote={'Read the best collection of people’s 2020 Year in Review stories.'}
                 hashtag={'#retrogram'}
             >
-                <FacebookBox size={64} style={{ color: '#3b5998' }} />
+                <img src="/images/facebook.png" alt="facebook logo" className={modalStyles.icon} />
             </FacebookShareButton>
             <TwitterShareButton
                 url={props.url}
@@ -36,7 +32,7 @@ export default function Social(props) {
                 hashtag={'#retrogram'}
                 via={'Peace'}
             >
-                <Twitter size={64} style={{ color: '#00acee' }} />
+                <img src="/images/twitter.png" alt="twitter logo" className={modalStyles.icon} />
             </TwitterShareButton>
             <EmailShareButton
                 url={props.url}
@@ -44,7 +40,7 @@ export default function Social(props) {
                 body={'Read the best collection of people’s 2020 Year in Review stories.'}
                 seperator={''}
             >
-                <Mail size={64} style={{ color: '#BB001B' }} />
+                <img src="/images/gmail.png" alt="gmail logo" className={modalStyles.icon} />
             </EmailShareButton>
             <LinkedinShareButton
                 url={props.url}
@@ -52,7 +48,7 @@ export default function Social(props) {
                 summary={'Read the best collection of people’s 2020 Year in Review stories.'}
                 source={'https://retrogram.co'}
             >
-                <LinkedinBox size={64} style={{ color: '#0e76a8' }} />
+                <img src="/images/linkedin.png" alt="linkedin logo" className={modalStyles.icon} />
             </LinkedinShareButton>
         </div>
     )

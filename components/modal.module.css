@@ -1,0 +1,165 @@
+.overlay {
+  position: fixed;
+  display: block; 
+  width: 100%; 
+  height: 100%; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 999; 
+}
+
+.content {
+  font-family: TTNormsPro;
+  font-weight: 100;
+  background-color: #c5b9b9;
+  border-radius: 0.25rem;
+  width: 80vw;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+}
+
+.closeIcon {
+  width: 20px;
+}
+
+/* Social Share modal styles */
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.container > * {
+  margin: .5rem;
+}
+
+.icon {
+  width: 38px;
+  color: #fff;
+}
+
+.icon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+/* End of Social Share modal styles */
+
+/* Terms modal styles */
+.terms {
+  padding: 2rem 0 1rem;
+  height: 80vh;
+}
+
+.list {
+  padding-bottom: 3rem;
+}
+
+.heading {
+  font-family: Canela;
+  font-size: 36px;
+  margin-bottom: 2rem;
+  font-weight: 100;
+}
+/* End of Terms modal styles */
+
+/* Submit modal styles */
+.submitNote {
+  font-family: Canela;
+  margin: 2rem 0;
+  font-weight: 100;
+}
+
+.okBtn {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 40px
+}
+/* End of SubmitNote modal styles */
+
+@media screen and (min-width: 768px) {
+  .closeIcon {
+    width: 30px;
+  }
+
+  .content {
+    width: auto;
+  }
+
+  /* Social Share modal styles */
+  .container{
+    margin: 1rem;
+  }
+
+  .container > * {
+    margin: 1rem;
+  }
+
+  .icon {
+    width: 64px;
+  }
+  /* End of Social Share modal styles */
+
+  /* Terms modal styles */
+  .heading {
+    font-size: 30px;
+  }
+  /* End of Terms modal styles */
+
+  /* Submit modal styles */
+  .submitNote {
+    font-size: 30px
+  }
+  /* End of Submit modal styles */
+}
+
+@media screen and (min-width: 1440px) {
+  .closeIcon {
+    width: 40px;
+  }
+
+  /* Social Share modal styles */
+  .container > * {
+    margin: 2rem;
+  }
+
+  .icon {
+    width: 80px;
+  }
+  /* End of Social Share modal styles */
+
+  /* Terms modal styles */
+  .terms {
+    margin: 2rem;
+    height: auto
+  }
+
+  .heading {
+    font-size: 39px;
+  }
+
+  .list {
+    padding-bottom: 0;
+  }
+  /* End of Terms modal styles */
+
+  /* Submit modal styles */
+  .submit {
+    margin: 2rem 4rem;
+  }
+  
+  .submitNote {
+    font-size: 40px;
+  }
+
+  .okBtn {
+    margin: 0 4rem;
+  }
+  /* End of Submit modal styles */
+}
