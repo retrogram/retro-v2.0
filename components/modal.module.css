@@ -14,10 +14,10 @@
 .content {
   font-family: TTNormsPro;
   font-weight: 100;
-  background-color: #c5b9b9;
+  background-color: #000000;
   border-radius: 0.25rem;
   width: 80vw;
-  padding: 2rem;
+  padding: 1rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -27,6 +27,11 @@
 
 .closeIcon {
   width: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
 }
 
 /* Social Share modal styles */
@@ -35,13 +40,11 @@
   grid-template-columns: repeat(5, 1fr);
 }
 
-.container > * {
-  margin: .5rem;
-}
-
 .icon {
   width: 38px;
   color: #fff;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .icon:hover {
@@ -90,6 +93,7 @@
 
   .content {
     width: auto;
+    padding: 2rem;
   }
 
   /* Social Share modal styles */

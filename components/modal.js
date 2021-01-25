@@ -8,13 +8,6 @@ export default function Example(props) {
         <Close
             className={modalStyles.closeIcon}
             onClick={closeModal}
-            style={{
-                color: '#ffffff',
-                cursor: 'pointer',
-                position: 'absolute',
-                top: '1.5rem',
-                right: '1.5rem',
-            }}
         />
     );
 

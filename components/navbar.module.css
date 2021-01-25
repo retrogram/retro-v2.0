@@ -6,6 +6,8 @@
     overflow: hidden;
     background-color: #080604;
     z-index: 1;
+    display: flex;
+    align-items: center;
 }
 
 .navbar {
@@ -18,14 +20,14 @@
 .navbarToggle {
     position: absolute;
     right: 7.5%;
-    justify-content: center;
+    top: 10px;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .name {
     display: inline-block;
-    width: 1.5rem;
+    width: 2rem;
 }
 
 .mainNavbar {

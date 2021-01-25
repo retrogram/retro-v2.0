@@ -41,13 +41,6 @@
 
 .gradient {
     position: relative;
-    display: inline-block;
-    -webkit-filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    filter: grayscale(100%);
-    transition: filter 0.7s ease-in-out;
 }
 
 .gradient::after {
@@ -59,13 +52,6 @@
     top: 0;
     left: 0;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 100%);
-}
-
-.gradient:hover {
-    -webkit-filter: none;
-    -moz-filter: none;
-    -ms-filter: none;
-    filter: none;
 }
 
 .individual {
@@ -116,6 +102,22 @@
     .individual {
         margin-bottom: 0;
         max-height: 450px;
+    }
+
+    .gradient {
+        -webkit-filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+        transition: filter 0.7s ease-in-out;
+    }
+    
+    .gradient:hover {
+        -webkit-filter: none;
+        -moz-filter: none;
+        -ms-filter: none;
+        filter: none;
     }
 }
 
