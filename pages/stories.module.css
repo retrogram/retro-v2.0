@@ -63,7 +63,7 @@
 .author {
     max-width: 70%;
     position: absolute;
-    left: 10px;
+    left: 30px;
     right: 0;
     bottom: 7px;
 }
@@ -73,6 +73,7 @@
     font-family: Canela;
     font-size: 24px;
     margin-bottom: 1rem;
+    line-height: 35px;
 }
 
 .authorName {
@@ -82,26 +83,33 @@
 @media screen and (min-width: 768px) {
     .section {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 40px;
     }
 
     .author {
-        max-width: 100%;
+        max-width: 70%;
     }
 
     .title {
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: .5rem;
+        line-height: 30px;
     }
 
     .authorName {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .individual {
         margin-bottom: 0;
-        max-height: 450px;
+        transition: transform .2s;
+        padding: .5rem;
+    }
+
+    .individual:hover {
+        transform: scale(1.1);
+        z-index: 1;
     }
 
     .gradient {
@@ -122,12 +130,17 @@
 }
 
 @media screen and (min-width: 1440px) {
+    .section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .heading {
         font-size: 64px;
     }
 
     .title {
         font-size: 24px;
+        line-height: 35px;
     }
 
     .authorName {
@@ -135,6 +148,10 @@
     }
 
     .author {
-        max-width: 70%;
+        max-width: 80%;
+    }
+
+    .individual:hover {
+        transform: scale(1.2);
     }
 }

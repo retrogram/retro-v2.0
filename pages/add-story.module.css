@@ -171,11 +171,6 @@
         align-items: center;
     }
 
-    .checkbox, .mark{
-        top: 7px;
-        left: -18px;
-    }
-
     .button{
         width: 50%;
         margin: 0;

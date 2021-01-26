@@ -64,10 +64,9 @@
     width: 100%;
   }
 
-  .yearLogo[src] {
-    content: url("/images/2020.svg");
+  .yearLogo {
     width: 85%;
-    margin: auto;
+    margin: 0 auto;
   }
 
   .cta {

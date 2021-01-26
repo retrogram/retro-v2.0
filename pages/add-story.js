@@ -164,7 +164,7 @@ const Add = () => {
                                     <span class={Styles.mark}></span>
                                 </label>
                                 <span className={Styles.terms}>I accept the {' '}
-                                    <a onClick={handleOn} style={{ textDecoration: 'underline' }}> Terms and Conditions</a>
+                                    <a onClick={handleOn} style={{ textDecoration: 'underline', cursor: 'pointer' }}> Terms and Conditions</a>
                                     {' '}for hosting my story on RetroGram.</span>
                             </p>
                             <button className={`${Styles.button} ${Styles.isPrimary}`} id="submit" type='submit' disabled>

@@ -39,15 +39,16 @@
 .authorName {
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .share {
-    padding: 10px 20px;
+    padding: 8px 15px;
     border: 1px solid #ffffff;
     background-color: transparent;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .shareModal {
@@ -84,6 +85,15 @@
         grid-column-gap: 5rem;
     }
 
+    .authorName {
+        font-size: 15px;
+    }
+    
+    .share {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
     .shareModal {
         font-size: 28px;
     }
@@ -92,6 +102,10 @@
 @media screen and (min-width: 1440px) {
     .storyHeading {
         font-size: 64px;
+    }
+
+    .authorName {
+        font-size: 16px;
     }
 
     .shareModal {

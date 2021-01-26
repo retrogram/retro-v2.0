@@ -57,7 +57,7 @@ export default function Post({ postData }) {
                     <h1 className={storyDetail.storyHeading}>{postData.title}</h1>
                     <div className={storyDetail.storyArticle}>
                         <a href={postData.twitter} className={storyDetail.authorName}>
-                            <Twitter size={20} style={{ color: '#00acee', marginRight: '10px' }} />{' '}{postData.name}
+                            <Twitter size={20} style={{ color: '#00acee', marginRight: '3px' }} />{' '}{postData.name}
                         </a>
                         <div className="share">
                             <button onClick={handleOpen} className={storyDetail.share}>

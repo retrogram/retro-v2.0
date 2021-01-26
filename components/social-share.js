@@ -30,20 +30,20 @@ export default function Social(props) {
                 url={props.url}
                 title={'Read the best collection of people’s 2020 Year in Review stories.'}
                 hashtag={'#retrogram'}
-                via={'Peace'}
+                via={'RetrogramHQ'}
             >
                 <img src="/images/twitter.png" alt="twitter logo" className={modalStyles.icon} />
             </TwitterShareButton>
             <EmailShareButton
                 url={props.url}
                 subject={'My Year in Review'}
-                body={'Read the best collection of people’s 2020 Year in Review stories.'}
+                body={'Read the best collection of people’s 2020 Year in Review stories. Click the link below to read my story'}
                 seperator={''}
             >
                 <img src="/images/gmail.png" alt="gmail logo" className={modalStyles.icon} />
             </EmailShareButton>
             <LinkedinShareButton
-                url={props.url}
+                url={'https://retrogram.co'}
                 title={'My Year in Review'}
                 summary={'Read the best collection of people’s 2020 Year in Review stories.'}
                 source={'https://retrogram.co'}
