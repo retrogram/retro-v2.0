@@ -23,14 +23,18 @@ export default function Layout({ children }) {
             <Head>
                 <link rel="icon" href="/images/Retrogram-logo.svg" sizes="192x192" />
                 <meta name="description" content="Share your year in review" />
-                <meta
-                    property="og:image"
-                    content={`https://og-image.now.sh/${encodeURI(
-                        siteTitle
-                    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-                />
-                <meta name="og:title" content={siteTitle} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="RetroGram" />
+                <meta property="og:site_name" content="RetroGram" />
+                <meta property="og:url" content="https://retrogram.co" />
+                <meta property="og:image" content="https://pbs.twimg.com/profile_banners/1353647172391231492/1611744920/1500x500" />
+                <meta name="og:description" content="Want to learn from others? Read their year in review to learn from their wins and loses" />
                 <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@RetroGramHQ" />
+                <meta name="twitter:title" content="RetroGram" />
+                <meta name="twitter:description" content="Want to learn from others? Read their year in review to learn from their wins and loses" />
+                <meta name="twitter:image" content="https://pbs.twimg.com/profile_banners/1353647172391231492/1611744920/1500x500" />
+                <meta name="twitter:image:alt" content="RetroGram logo"></meta>
             </Head>
             <header className={navStyles.header}>
                 <nav className={navStyles.navbar}>

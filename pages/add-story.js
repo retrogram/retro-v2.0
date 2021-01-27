@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Example from '../components/modal';
 import Layout, { siteTitle } from '../components/layout'
 import Terms from '../components/terms'
-import Styles from './add-story.module.css'
+import formStyles from './add-story.module.css'
 import modalStyles from '../components/modal.module.css'
 
 function goFurther() {
@@ -11,6 +11,11 @@ function goFurther() {
         document.getElementById("submit").disabled = false;
     else
         document.getElementById("submit").disabled = true;
+}
+
+function showSpinner() {
+    document.getElementById("loading").style.display = "block"
+    document.body.style = 'overflow: hidden'
 }
 
 const Add = () => {
@@ -24,6 +29,7 @@ const Add = () => {
     const handleClose = () => {
         setStatus(false);
         document.body.style = 'overflow: auto'
+        location.reload()
     };
 
     const [show, setShow] = useState(false);
@@ -65,6 +71,7 @@ const Add = () => {
             });
 
             if (res.status === 200) {
+                document.getElementById("loading").style.display = "none"
                 handleOpen();
                 setContact(e.target.reset());
                 document.getElementById("submit").disabled = true;
@@ -84,18 +91,18 @@ const Add = () => {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <div className={Styles.columnContent}>
-                <h2 className={Styles.heading}>Hi there, share with the world your 2020 Year in Review 😊</h2>
+            <div className={formStyles.columnContent}>
+                <h2 className={formStyles.heading}>Hi there, share with the world your 2020 Year in Review 😊</h2>
                 <form
                     action='https://api.staticforms.xyz/submit'
                     method='post'
                     onSubmit={handleSubmit}
                 >
-                    <div className={Styles.field}>
-                        <label className={Styles.label} >What's your name?</label>
-                        <div className={Styles.control}>
+                    <div className={formStyles.field}>
+                        <label className={formStyles.label} >What's your name?</label>
+                        <div className={formStyles.control}>
                             <input
-                                className={Styles.input}
+                                className={formStyles.input}
                                 type='text'
                                 name='name'
                                 onChange={handleChange}
@@ -103,11 +110,11 @@ const Add = () => {
                             />
                         </div>
                     </div>
-                    <div className={Styles.field}>
-                        <label className={Styles.label}>Enter your email address</label>
-                        <div className={Styles.control}>
+                    <div className={formStyles.field}>
+                        <label className={formStyles.label}>Enter your email address</label>
+                        <div className={formStyles.control}>
                             <input
-                                className={Styles.input}
+                                className={formStyles.input}
                                 type='email'
                                 name='email'
                                 onChange={handleChange}
@@ -115,11 +122,11 @@ const Add = () => {
                             />
                         </div>
                     </div>
-                    <div className={Styles.field}>
-                        <label className={Styles.label}>Enter your twitter handle</label>
-                        <div className={Styles.control}>
+                    <div className={formStyles.field}>
+                        <label className={formStyles.label}>Enter your twitter handle</label>
+                        <div className={formStyles.control}>
                             <input
-                                className={Styles.input}
+                                className={formStyles.input}
                                 type='url'
                                 name='twitter'
                                 onChange={handleChange}
@@ -128,11 +135,11 @@ const Add = () => {
                         </div>
                     </div>
 
-                    <div className={Styles.field}>
-                        <label className={Styles.label}>Link/URL to your story</label>
-                        <div className={Styles.control}>
+                    <div className={formStyles.field}>
+                        <label className={formStyles.label}>Link/URL to your story</label>
+                        <div className={formStyles.control}>
                             <input
-                                className={Styles.input}
+                                className={formStyles.input}
                                 type='url'
                                 name='story'
                                 onChange={handleChange}
@@ -140,9 +147,9 @@ const Add = () => {
                             />
                         </div>
                     </div>
-                    <div className={Styles.field} style={{ display: 'none' }}>
-                        <label className={Styles.label}>Title</label>
-                        <div className={Styles.control}>
+                    <div className={formStyles.field} style={{ display: 'none' }}>
+                        <label className={formStyles.label}>Title</label>
+                        <div className={formStyles.control}>
                             <input
                                 type='text'
                                 name='honeypot'
@@ -156,23 +163,30 @@ const Add = () => {
                             />
                         </div>
                     </div>
-                    <div className={`${Styles.field} ${Styles.isGrouped}`}>
-                        <div className={Styles.control}>
-                            <p className={Styles.check}>
-                                <label className={Styles.checkboxContainer}>
-                                    <input type="checkbox" name="checkbox" id="checkbox" className={Styles.checkbox} onClick={goFurther} />
-                                    <span class={Styles.mark}></span>
+                    <div className={`${formStyles.field} ${formStyles.isGrouped}`}>
+                        <div className={formStyles.control}>
+                            <p className={formStyles.check}>
+                                <label className={formStyles.checkboxContainer}>
+                                    <input type="checkbox" name="checkbox" id="checkbox" className={formStyles.checkbox} onClick={goFurther} />
+                                    <span className={formStyles.mark}></span>
                                 </label>
-                                <span className={Styles.terms}>I accept the {' '}
+                                <span className={formStyles.terms}>I accept the {' '}
                                     <a onClick={handleOn} style={{ textDecoration: 'underline', cursor: 'pointer' }}> Terms and Conditions</a>
                                     {' '}for hosting my story on RetroGram.</span>
                             </p>
-                            <button className={`${Styles.button} ${Styles.isPrimary}`} id="submit" type='submit' disabled>
-                                Submit
-                            </button>
+                            <span className="clickable" onClick={showSpinner} style={{ display: "contents" }}>
+                                <button className={`${formStyles.button} ${formStyles.isPrimary}`} id="submit" type='submit' disabled>
+                                    Submit
+                                </button>
+                            </span>
                         </div>
                     </div>
                 </form>
+            </div>
+            <div id="loading" className={formStyles.overlay}>
+                <div className={formStyles.loading}>
+                    <p className={formStyles.loadingText}>Submitting . . .</p>
+                </div>
             </div>
             {status && (
                 <Example closeModal={handleClose} footer={footer}>

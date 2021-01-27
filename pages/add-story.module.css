@@ -134,6 +134,34 @@
     font-size: 16px;
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8); 
+    z-index: 999; 
+}
+  
+.loading {
+    background-color: black;
+    width: 80vw;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loadingText {
+    text-align: center;
+    font-size: 20px;
+}
+
 
 @media screen and (min-width: 500px) { 
     .heading{
@@ -194,6 +222,10 @@
     .terms{
         width: 100%;
     }
+
+    .loadingText {
+        font-size: 36px;
+    }
 } 
  
 @media screen and (min-width: 1440px) { 
@@ -208,5 +240,9 @@
     .columnContent {
         width: 80%;
         margin: 0 auto
+    }
+
+    .loadingText {
+        font-size: 48px;
     }
 } 
