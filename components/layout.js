@@ -27,17 +27,13 @@ export default function Layout({ children }) {
                 <meta property="og:title" content="RetroGram" />
                 <meta property="og:site_name" content="RetroGram" />
                 <meta property="og:url" content="https://retrogram.co" />
-                {/* <meta property="og:image" content="https://i.postimg.cc/cCnDjhp6/2020BG.png" /> */}
-                <meta property="og:image" content="https://i.postimg.cc/9MZKCsCy/2020BG.png" />
-                <meta property="og:image:width" content="550" />
-                <meta property="og:image:height" content="350" />
+                <meta property="og:image" content="https://i.postimg.cc/cCnDjhp6/2020BG.png" />
                 <meta name="og:description" content="Want to learn from others? Read their year in review to learn from their wins and loses" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@RetroGramHQ" />
                 <meta name="twitter:title" content="RetroGram" />
                 <meta name="twitter:description" content="Want to learn from others? Read their year in review to learn from their wins and loses" />
-                {/* <meta name="twitter:image" content="https://i.postimg.cc/cCnDjhp6/2020BG.png" /> */}
-                <meta name="twitter:image" content="https://i.postimg.cc/9MZKCsCy/2020BG.png" />
+                <meta name="twitter:image" content="https://i.postimg.cc/cCnDjhp6/2020BG.png" />
                 <meta name="twitter:image:alt" content="RetroGram logo"></meta>
             </Head>
             <header className={navStyles.header}>
