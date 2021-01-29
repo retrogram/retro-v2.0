@@ -128,7 +128,7 @@ const Add = () => {
                             <input
                                 className={formStyles.input}
                                 type='url'
-                                name='twitter'
+                                name='$twitter'
                                 onChange={handleChange}
                                 required
                             />
@@ -141,7 +141,7 @@ const Add = () => {
                             <input
                                 className={formStyles.input}
                                 type='url'
-                                name='story'
+                                name='$story'
                                 onChange={handleChange}
                                 required
                             />
