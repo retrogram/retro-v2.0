@@ -1,11 +1,11 @@
 ---
 title: 'Love will reveal you, you may not like it.'
-image: /images/charles.png
+image: /images/Chareu.png
 twitter: 'https://twitter.com/madebycharles'
 name: 'madebycharles'
-story_link: 'https://onyeepeace.com'
+story_link: 'https://cogitare.xyz/2020-year-in-review-love-will-reveal-you-you-might-not-like-it/'
 ---
 
-In her presidential campaign last year, Kamala Harris pitched herself as a history-making candidate who could appeal to both progressives and moderates. Rather than trying to upend the economy, her policies sought incremental, targeted results, particularly focusing on historically marginalized groups like women, people of color and low-income Americans.
+It’s 2:50 am and I am back to writing a really long read. I had started this article just before Christmas but several life-changing events overwhelmed me. I am finishing it now, with a twist maybe. I tried sleeping just after my call with Defayo that ended a few minutes past 8 pm. After an hour of tossing, I finally found some sleep, 1 hour later I was up. Picked my phone scrolled through Twitter, checked my WhatsApp messages, dragged my feet to the bathroom and back to bed. Another attempt at trying to sleep, but this time with more struggle than the last.
 
-Her sharp debate skills and affable personality made her a top-tier contender in the early stages of the primary race. But her oscillations between policy positions resulted in damaging news cycles, and she dropped out of the race as her campaign ran out of money.
+To be honest, it was an interesting year for me. In several ways that I hadn’t imagined. They were ups and lows but none broke me as much as the last stroke at the end of the year.

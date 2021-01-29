@@ -80,6 +80,13 @@
     font-size: 16px;
 }
 
+.storiesImage {
+    width: 100%;
+    height: 384px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
 @media screen and (min-width: 768px) {
     .section {
         display: grid;
@@ -127,6 +134,11 @@
         -ms-filter: none;
         filter: none;
     }
+
+    .storiesImage {
+        width: 100%;
+        height: 341px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -153,5 +165,9 @@
 
     .individual:hover {
         transform: scale(1.2);
+    }
+
+    .storiesImage {
+        height: 311px;
     }
 }
