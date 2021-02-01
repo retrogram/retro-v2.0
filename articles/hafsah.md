@@ -1,5 +1,5 @@
 ---
-title: 'Let’s Call It Progress- My Year in Review (2020)'
+title: 'Let’s Call It Progress...'
 image: /images/hafsah.jfif
 twitter: 'https://twitter.com/hafsyforever'
 name: Hafsah

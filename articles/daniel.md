@@ -1,5 +1,5 @@
 ---
-title: 'What an eventful year of intense clusterfuckery and some wins!
+title: 'What an eventful year...!
 '
 image: /images/daniel.jpeg
 twitter: 'https://twitter.com/pixelDahn'
