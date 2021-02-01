@@ -61,7 +61,8 @@
 }
 
 .author {
-    max-width: 70%;
+    max-width: 80%;
+    height: 7rem;
     position: absolute;
     left: 30px;
     right: 0;
@@ -94,18 +95,14 @@
         grid-gap: 40px;
     }
 
-    .author {
-        max-width: 70%;
-    }
-
     .title {
-        font-size: 20px;
+        font-size: 24px;
         margin-bottom: .5rem;
         line-height: 30px;
     }
 
     .authorName {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .individual {
@@ -157,10 +154,6 @@
 
     .authorName {
         font-size: 16px;
-    }
-
-    .author {
-        max-width: 80%;
     }
 
     .individual:hover {

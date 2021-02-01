@@ -2,7 +2,7 @@
 title: 'Love will reveal you, you may not like it.'
 image: /images/Chareu.png
 twitter: 'https://twitter.com/madebycharles'
-name: 'madebycharles'
+name: 'Charles'
 story_link: 'https://cogitare.xyz/2020-year-in-review-love-will-reveal-you-you-might-not-like-it/'
 ---
 
