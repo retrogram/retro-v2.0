@@ -57,7 +57,7 @@ export default function Layout({ children }) {
                         <ul className={navStyles.mainNavbar} id="js-menu">
                             <li className={navStyles.mainNavlist}>
                                 <a
-                                    href="https://retroo.xyz"
+                                    href="https://2019.retrogram.co"
                                     target="_blank"
                                     className={navStyles.navLinks}
                                     rel="noopener">
