@@ -64,7 +64,7 @@ export default function Post({ postData }) {
                                 Share Story <Share size={20} fontWeight={100} />
                             </button>
                             {status && (<Example closeModal={handleClose}> <h3 className={storyDetail.shareModal}>Share via</h3>
-                                <Social url={`https://retrogram.co/${postData.id}`} />
+                                <Social url={`https://retrogram.co/posts/${postData.id}`} />
                             </Example>)}
                         </div>
                     </div>
