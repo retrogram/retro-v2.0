@@ -64,8 +64,12 @@
     font-size: 16px;
 }
 
-.story > p:first-child {
+.story > p {
     padding-bottom: 2rem;
+}
+
+.story > p:last-child {
+    padding-bottom: 0;
 }
 
 .more {

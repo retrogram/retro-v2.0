@@ -44,6 +44,7 @@ export default function Hi() {
             <a>SHARE YOURS &ensp; +</a>
           </Link>
         </div>
+        <a href="https://www.producthunt.com/posts/retrogram?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-retrogram" target="_blank" style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=283258&theme=dark" alt="RetroGram - The best collection of people’s 2020 Year in Review stories. | Product Hunt" style={{ width: "250px", height: "54px", display: "inline-block" }} /></a>
       </div>
     </Layout>
   );
