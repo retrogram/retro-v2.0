@@ -60,7 +60,7 @@ export default function Layout({ children }) {
                                     href="https://2019.retrogram.co"
                                     target="_blank"
                                     className={navStyles.navLinks}
-                                    rel="noopener">
+                                    rel="noreferrer noopener">
                                     2019
                                 </a>
                             </li>

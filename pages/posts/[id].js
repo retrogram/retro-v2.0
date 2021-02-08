@@ -56,7 +56,7 @@ export default function Post({ postData }) {
                 <div className={storyDetail.articleContainer}>
                     <h1 className={storyDetail.storyHeading}>{postData.title}</h1>
                     <div className={storyDetail.storyArticle}>
-                        <a href={postData.twitter} className={storyDetail.authorName}>
+                        <a href={postData.twitter} target="_blank" rel="noreferrer noopener" className={storyDetail.authorName}>
                             <Twitter size={20} style={{ color: '#00acee', marginRight: '3px' }} />{' '}{postData.name}
                         </a>
                         <div className="share">
@@ -70,7 +70,7 @@ export default function Post({ postData }) {
                     </div>
                     <hr style={{ backgroundColor: '#666666', height: '1px', border: 'none' }} />
                     <div className={storyDetail.story} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-                    <a href={postData.story_link} className={storyDetail.more}>READ MORE</a>
+                    <a href={postData.story_link} target="_blank" rel="noreferrer noopener" className={storyDetail.more}>READ MORE</a>
                     <div className={styles.backToHome}>
                         <Link href="/stories">
                             <a>← Back to stories</a>
